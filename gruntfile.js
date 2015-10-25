@@ -16,13 +16,12 @@ module.exports = function (grunt) {
 				options: {config: 'config.rb'}
 			}
 		},
-
 		
 		// Minify JS
 		uglify: {
 			my_target: {
 				files: {
-					'deploy/assets/scripts/scripts-min.js': ['src/scripts/config.js']
+					'deploy/assets/scripts/scripts-min.js': ['src/scripts/config.js', 'src/scripts/utilities.js']
 				}
 			}
 		},
@@ -41,7 +40,7 @@ module.exports = function (grunt) {
 
 			livereload: {
 				options: {livereload: true},
-				files: ['deploy/assets/styles/*.css', 'deploy/assets/scripts/*.js', '*.html', 'img/*']
+				files: ['deploy/assets/styles/*.css', 'deploy/assets/scripts/*.js', 'deploy/*.html', 'img/*']
 			}
 		}
 
